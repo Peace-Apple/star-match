@@ -1,15 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import StarsDisplay from './StarsDisplay';
-
-const PlayNumber = props => (
-  <button
-    className="number"
-    style={{backgroundColor: colors[props.status]}}
-    onClick={() => props.onClick(props.number, props.status)}
-  >
-    {props.number}
-  </button>
-);
+import PlayNumber from './PlayNumber';
 
 const PlayAgain = props => (
 	<div className="game-done">
@@ -124,14 +115,6 @@ const StarMatch = () => {
 	const [gameId, setGameId] = useState(1);
 	return <Game key={gameId} startNewGame={() => setGameId(gameId + 1)}/>;
 }
-
-// Color Theme
-const colors = {
-  available: 'lightgray',
-  used: 'lightgreen',
-  wrong: 'lightcoral',
-  candidate: 'deepskyblue',
-};
 
 export function App() { 
   return (
