@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-const StarsDisplay = props => (
-  <>
-    {utils.range(1, props.count).map(starId => (
-      <div key={starId} className="star" />
-    ))}
-  </>
-);
-
 const PlayNumber = props => (
   <button
     className="number"
