@@ -1,18 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import StarsDisplay from './StarsDisplay';
 import PlayNumber from './PlayNumber';
-
-const PlayAgain = props => (
-	<div className="game-done">
-  	<div 
-    	className="message"
-      style={{ color: props.gameStatus === 'lost' ? 'red' : 'green'}}
-    >
-  	  {props.gameStatus === 'lost' ? 'Game Over' : 'Nice'}
-  	</div>
-	  <button onClick={props.onClick}>Play Again</button>
-	</div>
-);
+import PlayAgain from './PlayAgain';
 
 const useGameState = timeLimit => {
   const [stars, setStars] = useState(utils.random(1, 9));
